@@ -242,7 +242,10 @@ class DishCard extends StatelessWidget {
                       child: Center(
                         child: Text(
                           'ADD',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
                     ),
