@@ -230,6 +230,7 @@ class DishCard extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {},
+                    style: ButtonStyle(),
                     child: Container(
                       decoration: BoxDecoration(
                         color: Colors.grey[800],
