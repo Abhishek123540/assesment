@@ -25,14 +25,15 @@ class Dish with ChangeNotifier {
 
 List<Dish> dishes = [
   Dish(
-      id: 1,
-      name: "Kung pao Chicken",
-      desc: "Classic Sichuan chicken dish with...",
-      imag: Image.asset('assets/images/Best Seller Icon.png'),
-      discount: 12.354,
-      price: 599,
-      veg: false,
-      colour: Colors.red),
+    id: 1,
+    name: "Kung pao Chicken",
+    desc: "Classic Sichuan chicken dish with...",
+    imag: Image.asset('assets/images/Best Seller Icon.png'),
+    discount: 12.354,
+    price: 599,
+    veg: false,
+    colour: Colors.red,
+  ),
   Dish(
       id: 2,
       name: "Chilli Chicken",
