@@ -14,6 +14,11 @@ class CartPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: ABar(),
       ),
+      body: ListView(
+        children: [
+          Container(),
+        ],
+      ),
     );
   }
 }

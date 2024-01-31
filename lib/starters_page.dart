@@ -207,7 +207,7 @@ class DishCard extends StatelessWidget {
                   Container(
                     child: dishes[i].discount > 0
                         ? Container(
-                            width: 130,
+                            width: 148,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -233,7 +233,7 @@ class DishCard extends StatelessWidget {
                                 '₹${dishes[i].price}.00',
                                 style: TextStyle(fontWeight: FontWeight.w800),
                               ),
-                              SizedBox(width: 75)
+                              SizedBox(width: 92)
                             ],
                           ),
                   ),
