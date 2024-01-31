@@ -1,3 +1,4 @@
+import 'package:assesment/cart_page.dart';
 import 'package:assesment/dish.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,14 @@ class StartersScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         color: Color.fromARGB(255, 122, 21, 236),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            a++;
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => CartPage(),
+              ),
+            );
+          },
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -72,6 +80,7 @@ class StarterPage extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
+              SizedBox(width: MediaQuery.of(context).size.width * 0.33),
               IconButton(
                 onPressed: () {},
                 icon: Icon(Icons.menu_rounded),
