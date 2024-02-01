@@ -16,7 +16,12 @@ class CartPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Container(),
+          Container(
+            margin: EdgeInsets.all(10),
+            height: 100,
+            width: MediaQuery.of(context).size.width * 0.8,
+            decoration: BoxDecoration(color: Colors.black),
+          ),
         ],
       ),
     );
