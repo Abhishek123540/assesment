@@ -26,6 +26,7 @@ class CartPage extends StatelessWidget {
             child: Row(
               children: [
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       height: 50,
@@ -37,7 +38,24 @@ class CartPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: Icon(
+                        color: Colors.indigo,
                         Icons.restaurant_rounded,
+                        size: 25,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.indigo,
+                        ),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: Icon(
+                        color: Colors.indigo,
+                        Icons.home_filled,
                         size: 25,
                       ),
                     ),
