@@ -10,17 +10,41 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 100,
-        backgroundColor: Color(313033),
+        backgroundColor: const Color(313033),
         automaticallyImplyLeading: false,
         title: ABar(),
       ),
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.all(10),
-            height: 100,
+            margin: const EdgeInsets.all(10),
+            height: 150,
             width: MediaQuery.of(context).size.width * 0.8,
-            decoration: BoxDecoration(color: Colors.black),
+            decoration: BoxDecoration(
+              color: Colors.grey[900],
+            ),
+            child: Row(
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.indigo,
+                        ),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: Icon(
+                        Icons.restaurant_rounded,
+                        size: 25,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
