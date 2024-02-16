@@ -43,7 +43,7 @@ class CartPage extends StatelessWidget {
                         size: 25,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 25,),
                     Container(
                       height: 50,
                       width: 50,
