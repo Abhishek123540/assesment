@@ -95,7 +95,25 @@ class CartPage extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         fontSize: 12.5,
                       ),
-                    )
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          height: 40,
+                          width: 100,
+                          child: Divider(
+                            indent: 0,
+                            endIndent: 0,
+                            color: Colors.white,
+                            height: 20,
+                            thickness: 2,
+                          ),
+                        ),
+                        Text('2.5km away')
+                      ],
+                    ),
+                    Text('Langsep Street'),
+                    Text('Home')
                   ],
                 ),
               ],
