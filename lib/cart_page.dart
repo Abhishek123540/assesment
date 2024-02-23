@@ -25,6 +25,7 @@ class CartPage extends StatelessWidget {
             ),
             child: Row(
               children: [
+                SizedBox(width: 20),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -43,7 +44,13 @@ class CartPage extends StatelessWidget {
                         size: 25,
                       ),
                     ),
-                    SizedBox(height: 25,),
+                    SizedBox(
+                      child: Text(
+                        ':',
+                        style: TextStyle(color: Colors.indigo),
+                      ),
+                      height: 20,
+                    ),
                     Container(
                       height: 50,
                       width: 50,
@@ -59,6 +66,36 @@ class CartPage extends StatelessWidget {
                         size: 25,
                       ),
                     ),
+                  ],
+                ),
+                SizedBox(width: 20),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 15),
+                    Row(
+                      children: [
+                        Text(
+                          'Malabar Cafe',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 15,
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Icon(
+                          Icons.location_on_sharp,
+                          size: 16,
+                        ),
+                      ],
+                    ),
+                    Text(
+                      'Restaurant',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12.5,
+                      ),
+                    )
                   ],
                 ),
               ],
