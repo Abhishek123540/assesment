@@ -173,7 +173,7 @@ class CartPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Container(
                   height: 100,
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
