@@ -158,7 +158,7 @@ class CartPage extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    Icons.arrow_drop_down,
+                    Icons.keyboard_arrow_down_rounded,
                     size: 35,
                   ),
                 ),
@@ -173,6 +173,7 @@ class CartPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Container(
                   height: 100,
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -195,7 +196,21 @@ class CartPage extends StatelessWidget {
                 );
               },
             ),
-          )
+          ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(Icons.badge_rounded),
+                Text('APPLY COUPON'),
+                SizedBox(width: 140),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.arrow_forward_ios),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
