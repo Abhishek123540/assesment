@@ -99,21 +99,40 @@ class CartPage extends StatelessWidget {
                     Row(
                       children: [
                         SizedBox(
-                          height: 40,
-                          width: 100,
+                          height: 35,
+                          width: 160,
                           child: Divider(
                             indent: 0,
                             endIndent: 0,
-                            color: Colors.white,
+                            color: Colors.white12,
                             height: 20,
                             thickness: 2,
                           ),
                         ),
-                        Text('2.5km away')
+                        SizedBox(width: 40),
+                        Text(
+                          '2.5km away',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        )
                       ],
                     ),
-                    Text('Langsep Street'),
-                    Text('Home')
+                    Text(
+                      'Langsep Street',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Text(
+                      'Home',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 13,
+                      ),
+                    ),
                   ],
                 ),
               ],
