@@ -165,6 +165,37 @@ class CartPage extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            height: 300,
+            width: MediaQuery.of(context).size.width,
+            child: ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return Container(
+                  height: 100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Kung Pao Chicken'),
+                          Text('Small'),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text('Kung Pao Chicken'),
+                          Text('Small'),
+                        ],
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          )
         ],
       ),
     );
