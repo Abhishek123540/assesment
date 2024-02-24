@@ -138,8 +138,13 @@ class CartPage extends StatelessWidget {
               ],
             ),
           ),
+          Divider(
+            color: Colors.white12,
+            indent: 10,
+            endIndent: 10,
+          ),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
