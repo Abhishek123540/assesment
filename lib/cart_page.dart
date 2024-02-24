@@ -143,15 +143,23 @@ class CartPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Order Details'),
+                Text(
+                  'ORDER DETAILS',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.arrow_drop_down),
+                  icon: Icon(
+                    Icons.arrow_drop_down,
+                    size: 35,
+                  ),
                 ),
               ],
             ),
           ),
-
         ],
       ),
     );
