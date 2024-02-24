@@ -141,15 +141,17 @@ class CartPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Order Details'),
                 IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.arrow_drop_down),
-                )
+                ),
               ],
             ),
           ),
+
         ],
       ),
     );
