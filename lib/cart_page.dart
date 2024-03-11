@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'bill.dart';
 import 'main.dart';
 
 class CartPage extends StatelessWidget {
@@ -12,7 +13,7 @@ class CartPage extends StatelessWidget {
         toolbarHeight: 100,
         backgroundColor: const Color(313033),
         automaticallyImplyLeading: false,
-        title: ABar(),
+        title: const ABar(),
       ),
       body: ListView(
         children: [
@@ -25,7 +26,7 @@ class CartPage extends StatelessWidget {
             ),
             child: Row(
               children: [
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -38,13 +39,13 @@ class CartPage extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(100),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         color: Colors.indigo,
                         Icons.restaurant_rounded,
                         size: 25,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       child: Text(
                         ':',
                         style: TextStyle(color: Colors.indigo),
@@ -60,7 +61,7 @@ class CartPage extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(100),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         color: Colors.indigo,
                         Icons.home_filled,
                         size: 25,
@@ -68,8 +69,8 @@ class CartPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(width: 20),
-                Column(
+                const SizedBox(width: 20),
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 15),
@@ -138,7 +139,7 @@ class CartPage extends StatelessWidget {
               ],
             ),
           ),
-          Divider(
+          const Divider(
             color: Colors.white12,
             indent: 10,
             endIndent: 10,
@@ -148,7 +149,7 @@ class CartPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'ORDER DETAILS',
                   style: TextStyle(
                     fontSize: 18,
@@ -157,7 +158,7 @@ class CartPage extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.keyboard_arrow_down_rounded,
                     size: 35,
                   ),
@@ -173,43 +174,76 @@ class CartPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Container(
                   height: 100,
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Kung Pao Chicken'),
-                          Text('Small'),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Kung Pao Chicken'),
+                              Text('Small'),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text('Kung Pao Chicken'),
+                              Text('Small'),
+                            ],
+                          ),
                         ],
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Text('Kung Pao Chicken'),
-                          Text('Small'),
-                        ],
-                      ),
+                      Divider(),
                     ],
                   ),
                 );
               },
             ),
           ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.badge_rounded),
-                Text('APPLY COUPON'),
-                SizedBox(width: 140),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.arrow_forward_ios),
-                ),
-              ],
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              const Icon(Icons.badge_rounded),
+              const Text('APPLY COUPON'),
+              const SizedBox(width: 140),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_forward_ios),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 2,
+            width: MediaQuery.of(context).size.width,
+            child: const Divider(
+              indent: 40,
+              endIndent: 40,
             ),
+          ),
+          const Bill(),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 5,
+              horizontal: 10,
+            ),
+            child: OutlinedButton(
+              style: ButtonStyle(
+                shape: MaterialStatePropertyAll(
+                  ContinuousRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: const Text('+ ADD MORE ITEMS'),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('data'),
           ),
         ],
       ),
