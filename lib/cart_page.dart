@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'bill.dart';
 import 'main.dart';
+import 'order_details.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -10,11 +11,10 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: const Color(313033),
-        automaticallyImplyLeading: false,
-        title: const ABar(),
-      ),
+          toolbarHeight: 100,
+          backgroundColor: const Color(313033),
+          automaticallyImplyLeading: false,
+          title: const ABar()),
       body: ListView(
         children: [
           Container(
@@ -172,34 +172,7 @@ class CartPage extends StatelessWidget {
             child: ListView.builder(
               itemCount: 5,
               itemBuilder: (context, index) {
-                return Container(
-                  height: 100,
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Kung Pao Chicken'),
-                              Text('Small'),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text('Kung Pao Chicken'),
-                              Text('Small'),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Divider(),
-                    ],
-                  ),
-                );
+                return OrderDetails();
               },
             ),
           ),
