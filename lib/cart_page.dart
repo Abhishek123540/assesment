@@ -11,10 +11,11 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          toolbarHeight: 100,
-          backgroundColor: const Color(313033),
-          automaticallyImplyLeading: false,
-          title: const ABar()),
+        toolbarHeight: 100,
+        backgroundColor: const Color(313033),
+        automaticallyImplyLeading: false,
+        title: const ABar(),
+      ),
       body: ListView(
         children: [
           Container(
