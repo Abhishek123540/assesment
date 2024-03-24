@@ -40,7 +40,6 @@ class OrderDetails extends StatelessWidget {
               ),
             ],
           ),
-          Divider(),
         ],
       ),
     );

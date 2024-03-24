@@ -173,7 +173,12 @@ class CartPage extends StatelessWidget {
             child: ListView.builder(
               itemCount: 5,
               itemBuilder: (context, index) {
-                return OrderDetails();
+                return Column(
+                  children: [
+                    OrderDetails(),
+                    Divider(),
+                  ],
+                );
               },
             ),
           ),
