@@ -10,24 +10,33 @@ class OrderDetails extends StatelessWidget {
     return Container(
       height: 100,
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
+      child: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
                 children: [
-                  Text('Kung Pao Chicken'),
-                  Text('Small'),
+                  Container(
+                    height: 6,
+                    width: 6,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    'Kung Pao Chicken',
+                    style: TextStyle(fontWeight: FontWeight.w700),
+                  ),
                 ],
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text('1750'),
-                  Text('Small'),
-                ],
+              Text(
+                'Small',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ],
           ),
