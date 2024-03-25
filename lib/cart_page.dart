@@ -175,6 +175,7 @@ class CartPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Column(
                   children: [
+                    SizedBox(height: 10),
                     OrderDetails(),
                     Divider(),
                   ],

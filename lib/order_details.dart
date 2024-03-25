@@ -8,9 +8,10 @@ class OrderDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 80,
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,7 +22,7 @@ class OrderDetails extends StatelessWidget {
                     height: 6,
                     width: 6,
                     decoration: BoxDecoration(
-                      color: Colors.green,
+                      color: Colors.greenAccent,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -40,8 +41,43 @@ class OrderDetails extends StatelessWidget {
               ),
             ],
           ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                '₹1050',
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              SizedBox(height: 10),
+              QuantityOfItemButton()
+            ],
+          ),
         ],
       ),
+    );
+  }
+}
+
+class QuantityOfItemButton extends StatelessWidget {
+  const QuantityOfItemButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.remove),
+        ),
+        Text('2'),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.add),
+        ),
+      ],
     );
   }
 }
