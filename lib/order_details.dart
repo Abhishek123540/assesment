@@ -65,19 +65,26 @@ class QuantityOfItemButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.remove),
-        ),
-        Text('2'),
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.add),
-        ),
-      ],
+    return Container(
+      height: 35,
+      width: 106,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.remove),
+          ),
+          Text('2'),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.add),
+          ),
+        ],
+      ),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+      ),
     );
   }
 }
